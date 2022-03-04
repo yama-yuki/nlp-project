@@ -1,3 +1,4 @@
 # nlp-project
 
-Implementation of Collins Parser for NLP class.
+- Collins Parser
+- .conllu to SpaCy doc Converter
