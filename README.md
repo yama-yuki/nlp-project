@@ -2,5 +2,5 @@
 memo
 
 - `collins.py`: Collins Parser
-- `conll_to_doc.py`: .conllu to SpaCy doc Converter
-- `model.py` and `train.py`: 3-layer NN from scrach
+- `conll_to_doc.py`: .conllu file to SpaCy doc object Converter
+- `model.py` and `train.py`: 3-layer Neural Network from scrach
