@@ -1,6 +1,6 @@
 '''
-from
-https://github.com/YutaroOgawa/pytorch_advanced/blob/master/8_nlp_sentiment_bert/8-2-3_bert_base.ipynb
+coding BERT tokenizer from scratch with「つくりながら学ぶ！PyTorchによる発展ディープラーニング」ch.8
+and BasicTokenizer, WordpieceTokenizer from
 https://github.com/huggingface/pytorch-pretrained-BERT/blob/master/pytorch_pretrained_bert/tokenization.py
 '''
 
