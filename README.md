@@ -1,5 +1,5 @@
 # nlp-project
-memo
+Past course works, utils for my research, etc. 
 
 - `bert.py`: BERT from scratch
 - `tokenizer.py`: BERT tokenizer from scratch
