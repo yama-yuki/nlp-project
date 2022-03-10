@@ -5,7 +5,6 @@ coding BERT from scratch with 「つくりながら学ぶ！PyTorchによる発�
 import json
 import math
 import os
-import numpy as np
 from attrdict import AttrDict
 
 import torch
@@ -378,7 +377,9 @@ class BertModel(nn.Module):
         elif attention_show_flg == False:
             return encoded_layers, pooled_output
 
+
 if __name__ == '__main__':
+    '''
     print(config)
 
     input_ids = torch.LongTensor([[31, 51, 12, 23, 99], [15, 5, 1, 0, 0]])
@@ -393,11 +394,21 @@ if __name__ == '__main__':
     print(encoded_layers.shape)
     print(pooled_output.shape)
     print(attention_probs.shape)
-
     '''
-    weights_path = "./weights/pytorch_model.bin"
+
+    weights_path = "../qa/models/bert-base-uncased-pytorch_model.bin"
     loaded_state_dict = torch.load(weights_path)
 
-    for s in loaded_state_dict.keys():
-        print(s)
-    '''
+    net = BertModel(config)
+    net.eval()
+
+    param_names = [name for name, _ in net.named_parameters()]
+    new_state_dict = net.state_dict().copy()
+
+    for index, (key_name, value) in enumerate(loaded_state_dict.items()):
+        name = param_names[index]
+        new_state_dict[name] = value
+        if index+1 >= len(param_names):
+            break
+
+    net.load_state_dict(new_state_dict)
