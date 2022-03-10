@@ -1,5 +1,5 @@
 '''
-coding BERT from scrach with 「PyTorchによる発展ディープラーニング」
+coding BERT from scratch with 「PyTorchによる発展ディープラーニング」
 '''
 
 import json
